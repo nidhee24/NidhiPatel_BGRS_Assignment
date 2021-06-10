@@ -40,11 +40,11 @@ function Characters({ p }) {
   const [open, setOpen] = React.useState(false); //for dialog control
   const [char, setChar] = React.useState(''); 
   const dispatch = useDispatch();
+  
 
 
-
-  const [value, setValue] = useState("R2-D2");
-  const myperson = useSelector(state => state.personReducer.person);
+  const [value, setValue] = useState("R2-D2"); // setting value in drop down
+  const myperson = useSelector(state => state.personReducer.person); // selecting value of character
 
 
   const handleChange = (event) => {
@@ -62,22 +62,16 @@ function Characters({ p }) {
   console.log("value", myperson)
 
   useEffect(() => {
-    dispatch(loadPerson())
+    dispatch(loadPerson())  // dispatching array of values of characters 
   }, [])
 
   useEffect(() => {
-
-    //Get id
+    //Get id of characters
     let index = _.findIndex(myperson && myperson.results , (e) => {
       return e.name == value;}, 0);
-
   console.log("index",index);
-
     dispatch(setpersonid(index))
-
     alert(_.find(myperson && myperson.results, function(o) { return o.name === value }) && _.find(myperson && myperson.results, function(o) { return o.name === value }).films)
-
-
     // dispatch(loadMovies(f));
   }, [value])
 
@@ -97,7 +91,7 @@ function Characters({ p }) {
       <FormControl className={classes.formControl}>
         <select
         labelId="demo-dialog-select-label"
-                id="demo-dialog-select"
+        id="demo-dialog-select"
           value={value}
           onChange={(e,i) => {
             setValue(e.currentTarget.value)

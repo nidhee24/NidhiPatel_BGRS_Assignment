@@ -12,4 +12,4 @@
 - [x] Used dialog box for drop down.
 
 ## Learning curves and challenges
-- [x] From this assignment I learned lodash which was totally new for me and I do used react practically was implementing redux was first time for me in such projects and thus this assignment gave me an opportunity to enhance my skills in redux. Initially, I was facing problems because API was little confusing but after involving more in api I came to know how to implement.
+- [x] From this assignment I learned lodash which was totally new for me and I do used react practically but implementing redux was first time for me in such project and thus this assignment gave me an opportunity to enhance my skills in redux. Initially, I was facing problems because API was little confusing but after involving more in api I came to know how to implement.
